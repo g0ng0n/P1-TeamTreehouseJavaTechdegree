@@ -30,7 +30,7 @@ public class PrompterTest {
     @Test
     @ExpectationsRule.ExceedsOnly
     public void prompterIsUsed() throws Exception {
-        Inspector inspector = sourcery.inspectorFor("GuessingGame");
+        Inspector inspector = sourcery.inspectorFor("Game");
         boolean prompterDeclared = inspector.matchingChain(chain -> chain
                 .withExpression(
                         Expressions

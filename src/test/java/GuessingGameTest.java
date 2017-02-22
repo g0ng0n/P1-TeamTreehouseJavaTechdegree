@@ -45,7 +45,7 @@ public class GuessingGameTest {
         consoler.addExpectedPrompt("1 attempt");
         consoler.ready();
 
-        GuessingGame.main(null);
+        Game.main(null);
 
         consoler.assertExpected("Did you increment the Random value you got by 1");
     }
@@ -64,7 +64,7 @@ public class GuessingGameTest {
         consoler.addExpectedPrompt("3 attempts");
         consoler.ready();
 
-        GuessingGame.main(null);
+        Game.main(null);
 
         consoler.assertExpected("Ensure your prompts match what was defined in the instructions");
     }
@@ -83,7 +83,7 @@ public class GuessingGameTest {
         consoler.addExpectedPrompt("3 attempts");
         consoler.ready();
 
-        GuessingGame.main(null);
+        Game.main(null);
 
         consoler.assertExpected("Ensure your prompts match what was defined by the exceeds requirements");
     }
@@ -102,7 +102,7 @@ public class GuessingGameTest {
         consoler.addExpectedPrompt("1 attempt");
         consoler.ready();
 
-        GuessingGame.main(null);
+        Game.main(null);
 
         consoler.assertExpected("Make sure to warn if the guesser goes over the maximum and do not count it as a try");
     }
