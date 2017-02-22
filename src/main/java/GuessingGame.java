@@ -7,11 +7,10 @@ public class GuessingGame {
 
       while (isHit != true ) {
         isHit = prompter.promptForGuess();
-          if (isHit){
-              prompter.displayWinMessage();
-          }
       }
-      
+      if (isHit){
+        prompter.displayWinMessage();
+      }
 
     }
 }

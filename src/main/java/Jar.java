@@ -36,15 +36,34 @@ public class Jar {
     
     public boolean guessLogic(int number) {
      
-      boolean isHit = itemNumber == number;
+      boolean isHit = this.itemNumber == number;
       if (!isHit) {
         addMiss();
-      } 
+      }
       return isHit;
     }
-  
+
+    public String checkHighLow(int number) {
+        if (number > this.itemNumber){
+            return "Your guess is too high";
+        }else{
+            if (number < this.itemNumber){
+                return "Your guess is too low";
+            }
+        }
+        return "error";
+    }
+
     private void addMiss(){
       this.misses ++;
     }
-  
+
+    public boolean checkIfGuessOverTheMax(int guessInput) {
+
+        if (guessInput > this.max){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
